@@ -1,0 +1,102 @@
+body { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    min-height: 100vh; 
+    overflow: hidden;
+    background: linear-gradient(45deg, #282828, #393939, #6c6c6c); 
+} 
+   
+.calculator { 
+    position: absolute;
+    width: 300px; 
+    margin: 0 auto; 
+    text-align: center; 
+    background-color: rgb(78, 78, 78); 
+    padding: 40px 0; 
+    border-radius: 10px; 
+    animation: shadow 2s ease infinite;
+    overflow: hidden;
+} 
+
+@keyframes shadow {
+    0% {
+        box-shadow: 
+        inset 0 0 45px 10px rgb(45, 45, 45),
+        0 0 30px 0px rgb(23, 143, 255);
+    }
+    33% {
+        box-shadow: 
+        inset 0 0 45px 10px rgb(45, 45, 45),
+        0 0 30px 0px rgb(23, 65, 255);
+    }
+    66% {
+        box-shadow: 
+        inset 0 0 45px 10px rgb(45, 45, 45),
+        0 0 30px 0px rgb(23, 112, 255);
+    }
+    100% {
+        box-shadow: 
+        inset 0 0 45px 10px rgb(45, 45, 45),
+        0 0 30px 0px rgb(23, 143, 255);
+    }
+}
+   
+input[type="text"] { 
+    box-sizing: border-box;
+    padding: 10px;
+    width: 80%; 
+    height: 80px; 
+    font-size: 35px; 
+    border-radius: 10px; 
+    text-align: right; 
+    margin-bottom: 10px;
+    background-color: rgb(128, 255, 255); 
+    color: #000099;
+    box-shadow: inset 0 0 20px 1px blue;
+} 
+   
+button { 
+    width: 50px; 
+    height: 50px; 
+    font-size: 24px; 
+    margin: 5px; 
+    border-radius: 5px; 
+    border: none; 
+    background-color: #212121; 
+    cursor: pointer;
+    color: aqua; 
+    transition: .3s;
+} 
+   
+button:hover { 
+    background-color: aqua;
+    color: #212121; 
+    box-shadow: 0 0 20px 5px aqua;
+} 
+   
+button:active { 
+    transform: scale(0.9); 
+} 
+   
+.blue { 
+    background-color: #0000ff;
+    color: rgb(175, 255, 255); 
+} 
+   
+.blue:hover { 
+    background-color: #000;
+    color: aqua; 
+    box-shadow: 0 0 20px 5px #0000ff;
+} 
+   
+.operators { 
+    background-color: skyblue; 
+    color: blue;
+} 
+   
+.operators:hover { 
+    background-color: #0000ff;
+    color: powderblue;
+    box-shadow: 0 0 20px 5px #0000ff; 
+}
