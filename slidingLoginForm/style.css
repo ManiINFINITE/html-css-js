@@ -1,0 +1,148 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, rgb(88, 88, 179), rgb(103, 103, 177), rgb(52, 52, 83));
+}
+
+.container {
+    position: relative;
+    height: 500px;
+    width: 400px;
+    background: linear-gradient(to bottom, rgb(88, 88, 179), rgb(103, 103, 177), rgb(52, 52, 83));
+    border-radius: 15px;
+    box-shadow: 0 0 30px 7px rgb(52, 52, 83);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container #login-title {
+    position: absolute;
+    margin-bottom: 400px;
+    font-size: 50px;
+    color: rgb(222, 222, 235);
+    transition: all 1s ease;
+}
+
+.container input {
+    width: 270px;
+    height: 40px;
+    border: none;
+    border-radius: 7px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.container #username {
+    position: absolute;
+    margin-bottom: 150px;
+}
+
+.container #password {
+    position: absolute;
+    margin-top: 25px;
+}
+
+.container #login-button {
+    position: absolute;
+    margin-top: 200px;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+    background: linear-gradient(45deg, rgb(84, 84, 185), rgb(127, 127, 186), rgb(88, 88, 183));
+    color: rgb(31, 31, 49);
+}
+
+.container .Signup {
+    position: absolute;
+    height: 600px;
+    width: 400px;
+    background: linear-gradient(to bottom, rgb(115, 115, 184), rgb(127, 127, 172), rgb(78, 78, 181));
+    margin-top: 950px;
+    border-radius: 50% / 10%;
+    transition: all 1s ease;
+}
+
+#chk {
+    display: none;
+}
+
+.container .Signup label {
+    position: absolute;
+    color: rgb(31, 31, 49);
+    position: absolute;
+    margin-left: 155px;
+    margin-top: 5px;
+    transition: all 1s ease;
+    font-size: 13px;
+}
+
+#chk:checked ~ .container .Signup {
+    margin-bottom: 800px;
+}
+
+#chk:checked ~ .container .Signup label {
+    color: rgb(222, 222, 235);
+    transform: scale(1.5);
+}
+
+#chk:checked ~ .container #login-title {
+    transform: scale(0.5);
+    color: rgb(31, 31, 49);
+}
+
+.container .Signup input[type="text"] {
+    position: absolute;
+    margin-top: 110px;
+    margin-left: 60px;
+}
+
+.container .Signup #pass {
+    position: absolute;
+    margin-top: 160px;
+    margin-left: 60px;
+}
+
+.container .Signup #repeatPass {
+    position: absolute;
+    margin-top: 210px;
+    margin-left: 60px;
+}
+
+.container .Signup input[type="email"] {
+    position: absolute;
+    margin-top: 260px;
+    margin-left: 60px;
+}
+
+.container .Signup button {
+    position: absolute;
+    margin-top: 360px;
+    margin-left: 150px;
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(to left, rgb(97, 97, 226), rgb(140, 140, 200), rgb(123, 123, 215));
+}
+
+.container input {
+    transition: all .5s ease;
+}
+
+.container input:hover {
+    box-shadow: 0px 0px 20px rgb(31, 31, 49);
+}
+
+.container button {
+    transition: all .5s ease;
+}
+
+.container button:hover {
+    box-shadow: 0 0 10px aqua;
+}
