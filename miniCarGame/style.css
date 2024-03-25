@@ -1,0 +1,413 @@
+body {
+    background: linear-gradient(20deg, rgb(2, 43, 0), rgb(10, 109, 10), rgb(1, 52, 1), rgb(38, 101, 17));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 0;
+}
+
+.road {
+    margin: 0;
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    background: linear-gradient(to right, grey, rgb(176, 175, 175), rgb(76, 76, 76));
+    filter: blur(1px);
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 10px darkgreen;
+}
+
+.light {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    filter:blur(20px);
+    background-color: yellow;
+    margin-right: 300px;
+    margin-top: 10px;
+    animation: light 2.5s linear infinite;
+}
+
+.road-light {
+    position: absolute;
+    margin-right: 300px;
+    width: 50px;
+    height: 30px;
+    border-radius: 50%;
+    background: linear-gradient(grey, rgb(75, 75, 75), rgb(154, 153, 153));
+    animation: light 2.5s linear infinite;
+}
+
+@keyframes light {
+    from {
+        margin-top: -90%;
+    }
+    to {
+        margin-top: 90%;
+    }
+}
+
+.road .lines {
+    position: absolute;
+    animation: roadMove 1.5s linear infinite;
+}
+
+.road .lines div {
+    position: absolute;
+    margin-left: 50%;
+    height: 100px;
+    width: 10px;
+    border-radius: 5px;
+    background-color: yellow;
+    margin-left: 150px;
+}
+
+.road .lines #line1 {
+    margin-top: 150px;
+}
+
+.road .lines #line2 {
+    margin-top: 300px;
+}
+
+.road .lines #line3 {
+    margin-top: 450px;
+}
+
+.road .lines #line4 {
+    margin-top: 600px;
+}
+
+.road .lines #line5 {
+    margin-top: -150px;
+}
+
+.road .lines #line6 {
+    margin-top: -300px;
+}
+
+@keyframes roadMove {
+    from {margin-top: 0;}
+    to {margin-top: 50%;}
+}
+
+.road .car {
+    position: absolute;
+    width: 40px;
+    height: 60px;
+    background-color: #000;
+    margin-top: 600px;
+    margin-left: 135px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    transition: all 1s ease;
+    box-shadow: 0 0 10px #000;
+}
+
+.road .car #lightr, .road .car #lightl {
+    position: absolute;
+    width: 13px;
+    height: 10px;
+    background-color: yellow;
+    
+}
+
+.road .car #lightr {
+    margin-left: 25px;
+    margin-top: 0px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.road .car #lightl {
+    margin-top: 0px;
+    margin-left: 2px;
+    border-bottom-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.road .car #backlr, .road .car #backll {
+    position: absolute;
+    width: 13px;
+    height: 10px;
+    background-color: #f00;
+}
+
+.road .car #backlr {
+    margin-top: 50px;
+    margin-left: 27px;
+    border-bottom-right-radius: 5px;
+}
+
+.road .car #backll {
+    margin-top: 50px;
+    margin-left: 0;
+    border-bottom-left-radius: 5px;
+}
+
+.steerRight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background: linear-gradient(black, rgb(69, 69, 69), rgb(53, 53, 53));
+    color: yellow;
+    border-radius: 50%;
+    margin-left: 600px;
+    font-size: 40px;
+    margin-top: 500px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.steerLeft {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    background: linear-gradient(black, rgb(69, 69, 69), rgb(53, 53, 53));
+    color: yellow;
+    border-radius: 50%;
+    font-size: 40px;
+    margin-top: 500px;
+    margin-right: 600px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.steerLeft:hover, .steerRight:hover {
+    box-shadow: 
+        inset 0 0 10px red,
+        0 0 20px red
+    ;
+    color: red;
+    text-shadow: 0 0 20px yellow;
+} 
+
+.steerLeft:active,
+.steerRight:active {
+    transform: scale(0.7);
+}
+
+.treeColumnRight {
+    position: absolute;
+    margin-left: 260px;
+    animation: treeR 1.5s linear infinite;
+}
+
+.treeColumnRight div {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: darkgreen;
+    margin-top: -350px;
+    filter: blur(2px);
+    box-shadow: 0 0 20px #000;
+}
+
+.treeColumnRight #tree1 {
+    margin-top: -200px;
+}
+
+.treeColumnRight #tree2 {
+    margin-top: -50px;
+    width: 100px;
+    height: 100px;
+}
+
+.treeColumnRight #tree3 {
+    margin-top: 100px;
+}
+
+.treeColumnRight #tree4 {
+    margin-top: 250px;
+    height: 90px;
+    width: 90px;
+}
+
+.treeColumnRight #tree5 {
+    margin-top: -500px;
+}
+
+.treeColumnRight #tree6 {
+    margin-top: -650px;
+    height: 130px;
+    width: 130px;
+}
+
+@keyframes treeR {
+    from {
+        margin-top: 0%;
+    }
+    to {
+        margin-top: 50%;
+    }
+}
+
+.treeColumnLeft {
+    position: absolute;
+    margin-right: 500px;
+    animation: treeL 1.5s linear infinite;
+}
+
+.treeColumnLeft div {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: darkgreen;
+    margin-top: -350px;
+    filter: blur(2px);
+    box-shadow: 0 0 20px #000;
+}
+
+.treeColumnLeft #tree1 {
+    margin-top: -200px;
+    height: 90px;
+    width: 90px;
+}
+
+.treeColumnLeft #tree2 {
+    margin-top: -50px;
+}
+
+.treeColumnLeft #tree3 {
+    margin-top: 100px;
+    height: 130px;
+    width: 130px;
+}
+
+.treeColumnLeft #tree4 {
+    margin-top: 250px;
+}
+
+.treeColumnLeft #tree5 {
+    margin-top: -500px;
+}
+
+.treeColumnLeft #tree6 {
+    margin-top: -650px;
+    width: 95px;
+    height: 95px;
+}
+
+@keyframes treeL {
+    from {
+        margin-top: 0%;
+    }
+    to {
+        margin-top: 50%;
+    }
+}
+
+.flashR,
+.flashL {
+    position: absolute;
+    height: 75px;
+    width: 75px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 25px;
+    transition: all 0.5s;
+    background: linear-gradient(rgb(49, 49, 49), rgb(92, 92, 92), rgb(57, 57, 57));
+}
+
+.flashR {
+    margin-left: 600px;
+    margin-top: 250px;
+}
+
+.flashL {
+    margin-right: 600px;
+    margin-top: 250px;
+}
+
+.flashL:hover,
+.flashR:hover {
+    box-shadow: 0 0 10px orangered, inset 0 0 10px orangered;
+    cursor: pointer;
+    color: orangered;
+}
+
+.flashL:active,
+.flashR:active {
+    transform: scale(0.7);
+}
+
+.road .car #fr, .road .car #fl {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #000;
+    margin-top: 20px;
+}
+
+.road .car #fr {
+    margin-left: 35px;
+    animation: none;
+}
+
+.road .car #fl {
+    animation: none;
+}
+
+@keyframes flashRight {
+    0% {
+        background-color: #000;
+    }
+    50% {
+        background-color: orangered;
+    }
+    100% {
+        background-color: #000;
+    }
+}
+
+.road .car #LL {
+    position: absolute;
+    width: 15px;
+    height: 20px;
+    background-color: yellow;
+    margin-top: -20px;
+    filter: blur(8px);
+}
+
+.road .car #LR {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: yellow;
+    margin-top: -20px;
+    filter: blur(8px);
+    margin-left: 23px;
+}
+
+.road #chk-R,
+.road #chk-L {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+}
+
+.road #chk-R:checked ~ .car #fr {
+    animation: flashRight 0.5s linear infinite;
+}
+
+.road #chk-L:checked ~ .car #fl {
+    animation: flashRight 0.5s linear infinite;
+}
