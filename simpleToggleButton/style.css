@@ -1,0 +1,48 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, rgb(35, 35, 35), rgb(60, 60, 60), rgb(85, 85, 85));
+}
+
+.lightOff {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #f00;
+    margin-right: 10px;
+    box-shadow: 0px 0px 10px 3px #f00;
+    transition: 0.5s;
+}
+
+.lightOn {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+    margin-left: 10px;
+    box-shadow: inset 0px 0px 5px grey;
+    transition: 0.5s;
+}
+
+.container {
+    height: 100px;
+    width: 270px;
+    background: grey;
+    border-radius: 80px;
+    box-shadow: inset 0px 0px 20px 10px rgb(50, 50, 50),
+        0px 0px 10px red;
+}
+
+.container .buttonB {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    background-color: white;
+    margin-top: 10px;
+    margin-left: 10px;
+    box-shadow: inset 0px 0px 20px 10px #f00, 0px 0px 20px #f00;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
