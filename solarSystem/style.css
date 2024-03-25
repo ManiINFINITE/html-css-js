@@ -1,0 +1,76 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #000;
+}
+
+.sun {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: yellow;
+    box-shadow: 0px 0px 20px 10px rgb(255, 98, 0), inset 0px 0px 20px 10px rgb(255, 98, 0);
+}
+
+.earthOrbit {
+    width: 530px;
+    height: 530px;
+    border-radius: 50%;
+    background: #000;
+    animation: earthRotate 7s linear infinite;
+}
+
+.earthOrbit .earth {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(45deg, skyblue, yellowgreen, rgb(109, 205, 218), green, blue);
+    border-radius: 50%;
+    margin-left: 200px;
+    margin-top: -35px;
+    box-shadow: 0px 0px 50px rgb(0, 217, 255), inset 0px 0px 10px 2px rgb(0, 217, 255);
+    animation: earth 3.5s linear infinite;
+}
+
+@keyframes earthRotate {
+    0% {
+        transform: rotate(360deg);
+    }
+}
+
+.earthOrbit .moonOrbit {
+    position: absolute;
+    width: 170px;
+    height: 170px;
+    background: #000;
+    border-radius: 50%;
+    margin-left: 165px;
+    margin-top: -70px;
+    animation: moonRotate 3s linear infinite;
+}
+
+.earthOrbit .moonOrbit .moon {
+    position: absolute;
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    background: rgb(179, 188, 188);
+    margin-left: 68px;
+    margin-top: -10px;
+    box-shadow: 0px 0px 10px 2px aqua;
+}
+
+@keyframes moonRotate {
+    0% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes earth {
+    0% {
+        transform: rotate(360deg);
+    }
+}
