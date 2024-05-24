@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic Circle</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="ms2">
+            <div class="border"></div>
+            <div class="screen">
+                <img src="nature.jpg" alt="nature" id="nature">
+                <img src="rocket3d.png" alt="rocket" id="rocket3d">
+                <img src="airplane3d.png" alt="airplane" id="airplane3d">
+                <div id="explosive"></div>
+            </div>
+            <div class="controls">
+                <div id="clock"></div>
+                <button id="rocket">
+                    <img src="icons8-rocket-24.png" alt="rocket" id="rocketImg">
+                </button>
+                <button id="dino">
+                    <img src="icons8-dinosaur-32.png" alt="dino" id="dinoImg">
+                </button>
+                <button id="airplane">
+                    <img src="icons8-airplane-48.png" alt="airplane" id="airplaneImg">
+                </button>
+                <div class="wheel">
+                    <img src="icons8-sun-50.png" alt="sun" id="sun">
+                    <img src="icons8-sunset-64.png" alt="sunset" id="sunset">
+                    <img src="icons8-cloud-24.png" alt="cloud" id="cloud">
+                    <img src="icons8-rain-cloud-50.png" alt="rain" id="rain">
+                    <img src="icons8-snow-48.png" alt="snow" id="snow">
+                    <img src="icons8-moon-50.png" alt="moon" id="moon">
+                </div>
+                <div class="temp">
+                    <h3 id="T">Temperature</h3>
+                    <input type="checkbox" id="tempCHK">
+                    <div id="monitor"></div>
+                    <button id="F">F</button>
+                    <button id="C">C</button>
+                </div>
+                <div class="power">
+                    <label id="powerButton" for="tempCHK">
+                        <div id="circle"></div>
+                        <div id="line"></div>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
