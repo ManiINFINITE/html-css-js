@@ -1,0 +1,452 @@
+@font-face {
+    font-family: 'digital';
+    src: url('digital-7.woff2') format('woff2'),
+           url('digital-7.woff') format('woff'),
+           url('digital-7.ttf') format('truetype');
+  }
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: linear-gradient(45deg, rgb(41, 48, 57), rgb(86, 98, 113), rgb(193, 208, 225));
+}
+
+.container {
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    background-color: rgb(53, 61, 71);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -20px 15px 30px 10px rgb(13, 15, 23),
+    inset 15px -20px 40px 20px rgb(13, 15, 23),
+    inset -15px 10px 40px 0px rgb(191, 200, 212);
+    border: none;
+}
+
+.container .ms2 {
+    position: absolute;
+    width: 650px;
+    height: 650px;
+    background-color: rgb(73, 84, 97);
+    border-radius: 50%;
+    box-shadow: 3px -3px 20px 2px rgb(23, 30, 41),
+    inset 10px -10px 40px 20px rgb(13, 15, 23),
+    inset -10px 10px 15px -5px rgb(206, 228, 244);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .ms2 .border {
+    position: absolute;
+    width: 620px;
+    height: 620px;
+    border-radius: 50%;
+    background-color: rgb(53, 61, 71);
+    box-shadow: inset 13px -13px 30px 0px rgb(13, 15, 23),
+    inset -5px 5px 10px -5px rgb(109, 127, 141),
+    5px -5px 5px -3px rgb(43, 50, 54);
+}
+
+.container .ms2 .screen {
+    position: absolute;
+    height: 290px;
+    width: 580px;
+    background: rgb(30, 33, 37);
+    border-top-left-radius: 500px;
+    border-top-right-radius: 500px;
+    top: 25px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: inset 5px 2px 20px 2px rgb(13, 15, 23),
+    inset -2px 3px 10px 0px rgb(167, 176, 188);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .ms2 .screen #nature {
+    opacity: 0;
+    position: absolute;
+    width: 580px;
+    height: 290px;
+    border-top-left-radius: 500px;
+    border-top-right-radius: 500px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    transition: .35s;
+    filter: hue-rotate(-20deg);
+}
+
+.container .ms2 .controls {
+    position: absolute;
+    height: 290px;
+    width: 580px;
+    border-bottom-left-radius: 500px;
+    border-bottom-right-radius: 500px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: rgb(130, 142, 161);
+    bottom: 25px;
+    box-shadow: inset 5px 2px 20px 2px rgb(13, 15, 23),
+    5px -5px 20px -2px rgb(21, 25, 33),
+    inset 0px 20px 40px 15px rgb(72, 82, 92);
+    overflow: hidden;
+}
+
+.container .ms2 .controls .temp {
+    position: absolute;
+    height: 290px;
+    width: 200px;
+    background-color: rgb(53, 61, 71);
+    right: 0px;
+    box-shadow: inset 0 0 50px 15px rgb(21, 25, 33),
+    inset 10px -10px 30px 0px rgb(167, 176, 188),
+    0 0 20px 10px rgb(43, 48, 54);
+    display: flex;
+    justify-content: center;
+}
+
+h3 {
+    position: absolute;
+    color: rgb(31, 32, 35);
+    text-shadow: 0 0 10px rgb(73, 75, 82);
+    top: -5px;
+    transition: .3s;
+}
+
+.container .ms2 .controls .temp #monitor {
+    position: absolute;
+    width: 110px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: rgb(24, 24, 24);
+    top: 45px;
+    box-shadow: inset 0 0 5px 0px rgb(191, 200, 212),
+    0 0 10px -5px rgb(191, 200, 212);
+    border: 1px solid rgb(24, 24, 24);
+    color: rgb(167, 176, 188);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: digital;
+    font-size: 30px;
+
+}
+
+.container .ms2 .controls .temp #F {
+    position: absolute;
+    width: 45px;
+    height: 30px;
+    background-color: rgb(21, 25, 33);
+    border-radius: 15px;
+    border: none;
+    top: 120px;
+    left: 45px;
+    color: rgb(23, 26, 33);
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: -3px 3px 5px 0px rgb(22, 22, 22),
+    2px -2px 5px 0px rgb(140, 148, 158),
+    inset 3px -3px 5px -3px rgb(22, 22, 22),
+    inset -2px 2px 5px -2px rgb(141, 149, 159);
+    transition: .3s;
+    cursor: pointer;
+}
+
+.container .ms2 .controls .temp #C {
+    position: absolute;
+    width: 45px;
+    height: 30px;
+    background-color: rgb(21, 25, 33);
+    border-radius: 15px;
+    border: none;
+    top: 120px;
+    left: 110px;
+    color: rgb(23, 26, 33);
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: -3px 3px 5px 0px rgb(22, 22, 22),
+    2px -2px 5px 0px rgb(140, 148, 158),
+    inset 3px -3px 5px -3px rgb(22, 22, 22),
+    inset -2px 2px 5px -2px rgb(141, 149, 159);
+    transition: .3s;
+    cursor: pointer;
+}
+
+#tempCHK {
+    display: none;
+}
+
+.container .ms2 .controls .power {
+    position: absolute;
+    height: 290px;
+    width: 70px;
+    background-color: rgb(53, 61, 71);
+    left: 40px;
+    top: 30px;
+    border-radius: 13px;
+    box-shadow: inset 0 0 30px 5px rgb(21, 25, 33),
+    0 0 20px 10px rgb(37, 42, 46);
+}
+
+.container .ms2 .controls .power #powerButton {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    background-color: rgb(53, 61, 71);
+    border: none;
+    box-shadow: 0 0 10px -5px rgb(21, 25, 33),
+    inset 4px -4px 5px 0px rgb(21, 28, 35),
+    inset -1px 1px 5px 0px rgb(114, 123, 133),
+    -4px 7px 10px 0px rgb(21, 28, 35),
+    4px -4px 5px 2px rgb(21, 28, 35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.container .ms2 .controls .power #powerButton:active {
+    transform: scale(.9);
+}
+
+.container .ms2 .controls .power #powerButton:hover #circle {
+    border: 3px solid rgb(167, 176, 188);
+}
+
+.container .ms2 .controls .power #powerButton:hover #line {
+    background-color: rgb(167, 176, 188);
+}
+
+.controls .power #powerButton #circle {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid rgb(8, 15, 24);
+    transition: .3s;
+}
+
+.controls .power #powerButton #line {
+    position: absolute;
+    width: 3px;
+    height: 13px;
+    border-radius: 5px;
+    background-color: rgb(8, 15, 24);
+    top: 6px;
+    box-shadow: 0 0 0px 2px rgb(53, 61, 71);
+    transition: .3s;
+}
+
+.controls #clock {
+    position: absolute;
+    height: 10px;
+    width: 120px;
+    border-radius: 10px;
+    background: rgb(24, 24, 24);
+    left: 215px;
+    top: 15px;
+    box-shadow: 0 0 10px 4px rgb(42, 46, 50),
+    inset 1px -1px 5px -2px rgb(140, 148, 158);
+    transition: height .3s, color .1s;
+    font-family: digital;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: transparent;
+    text-shadow: 0 0 10px transparent;
+}
+
+.controls .wheel {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background-color: rgb(53, 61, 71);
+    left: 197px;
+    top: 95px;
+    box-shadow: inset 5px -5px 20px 5px rgb(33, 38, 42),
+    inset -3px 3px 20px 2px rgb(170, 183, 202),
+    -4px 4px 15px 0px rgb(33, 38, 42),
+    4px -4px 10px 0px rgb(116, 127, 141);
+}
+
+.controls .wheel #sun {
+    position: absolute;
+    left: 56px;
+    top: 10px;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.controls .wheel #sunset {
+    position: absolute;
+    height: 42px;
+    width: 42px;
+    left: 110px;
+    top: 40px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.controls .wheel #cloud {
+    position: absolute;
+    height: 27px;
+    width: 27px;
+    top: 47px;
+    left: 15px;
+    transform: rotate(-45deg);
+    cursor: pointer;
+}
+
+.controls .wheel #rain {
+    position: absolute;
+    height: 37px;
+    width: 37px;
+    top: 90px;
+    left: 17px;
+    transform: rotate(-135deg);
+    cursor: pointer;
+}
+
+.controls .wheel #snow {
+    position: absolute;
+    height: 36px;
+    width: 36px;
+    top: 91px;
+    left: 107px;
+    transform: rotate(135deg);
+    cursor: pointer;
+}
+
+.controls .wheel #moon {
+    position: absolute;
+    height: 37px;
+    width: 37px;
+    left: 63px;
+    bottom: 10px;
+    transform: rotate(180deg);
+    cursor: pointer;
+}
+
+.controls #rocket,
+.controls #dino,
+.controls #airplane {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(53, 61, 71);
+    border: none;
+    left: 130px;
+    box-shadow: 0 0 10px -5px rgb(21, 25, 33),
+    inset 4px -4px 5px 0px rgb(21, 28, 35),
+    inset -1px 1px 5px 0px rgb(114, 123, 133),
+    -4px 7px 10px 0px rgb(21, 28, 35),
+    2.5px -2.5px 5px 0px rgb(104, 122, 141);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.controls #rocket {
+    top: 30px;
+}
+
+.controls #dino {
+    top: 100px;
+}
+
+.controls #airplane {
+    top: 170px;
+}
+
+.controls #airplane #airplaneImg {
+    width: 38px;
+}
+
+.controls #rocket #rocketImg {
+    width: 30px;
+}
+
+.controls #rocket:active,
+.controls #airplane:active {
+    transform: scale(.9);
+}
+
+#rocket3d {
+    position: absolute;
+    height: 65px;
+    width: 65px;
+    transform: rotate(180deg);
+    left: 275px;
+    top: -60px;
+    animation: none;
+    filter: drop-shadow(0 0 15px black);
+}
+
+#explosive {
+    position: absolute;
+    top: 235px;
+    left: 305px;
+    animation: none;
+}
+
+@keyframes rocket {
+    from {
+        top: -60px;
+        opacity: 1;
+    }
+    to {
+        top: 210px;
+        opacity: .5;
+    }
+}
+
+@keyframes explosion {
+    0% {
+        box-shadow: none;
+    }
+    75% {
+        box-shadow:
+        0 0 150px 100px rgb(255, 80, 80),
+        0 0 230px 180px orangered,
+        0 0 300px 250px yellow
+        ;
+    }
+}
+
+#airplane3d {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    top: 90px;
+    left: -45px;
+    animation: none;
+    filter: drop-shadow(0 0 15px black);
+}
+
+@keyframes airplane {
+    from {
+        left: -45px;
+    }
+    to {
+        left: 650px;
+    }
+}
