@@ -1,0 +1,130 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgb(23, 23, 0);
+    overflow: hidden;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#container {
+    position: absolute;
+    height: 480px;
+    width: 480px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+#container .borders {
+    position: absolute;
+    background-color: transparent;
+    border: 3.5px solid rgb(255, 255, 255);
+    animation: none;
+    transition: all .5s ease;
+}
+
+.borders:nth-child(2) {
+    height: 460px;
+    width: 460px;
+    border-radius: 47% 53% 36% 64% / 60% 33% 67% 40%;
+    transform: rotate(-15deg);
+}
+
+.borders:first-child {
+    height: 490px;
+    width: 490px;
+    border-radius: 29% 71% 64% 36% / 44% 40% 60% 56%;
+    transform: rotate(10deg);
+}
+
+.borders:last-child {
+    height: 480px;
+    width: 480px;
+    border-radius: 31% 69% 51% 49% / 67% 43% 57% 33%;
+    transform: rotate(20deg);
+}
+
+#form {
+    position: absolute;
+    height: 480px;
+    width: 480px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+#heading {
+    position: absolute;
+    top: 90px;
+    color: white;
+}
+
+#username {
+    position: absolute;
+    top: 160px;
+    width: 300px;
+    height: 45px;
+    border-radius: 100px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 2px solid white;
+    cursor: text;
+    color: white;
+    font-weight: 500;
+}
+
+#password {
+    position: absolute;
+    top: 220px;
+    height: 45px;
+    width: 300px;
+    border-radius: 100px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: 2px solid white;
+    cursor: text;
+    color: white;
+    font-weight: 500;
+}
+
+button {
+    position: absolute;
+    top: 280px;
+    border: none;
+    height: 45px;
+    width: 300px;
+    border-radius: 100px;
+    cursor: pointer;
+    background: white;
+    color: rgb(23, 23, 0);
+    font-weight: 700;
+    font-size: 20px;
+}
+
+#forget {
+    position: absolute;
+    top: 325px;
+    color: white;
+    left: 120px;
+    font-weight: 100;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#signup {
+    position: absolute;
+    top: 325px;
+    color: white;
+    right: 120px;
+    font-weight: 100;
+    font-size: 15px;
+    cursor: pointer;
+}
