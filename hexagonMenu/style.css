@@ -1,0 +1,109 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #191919;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    height: 500px;
+    width: 700px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    left: 50px;
+    top: 35px;
+}
+
+.container .items {
+    position: absolute;
+    height: 170px;
+    width: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+    clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+}
+
+.border {
+    position: absolute;
+    height: 177px;
+    width: 177px;
+    -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+    clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 0 0 10px rgb(0, 0, 0);
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.border:first-child {
+    left: 50px;
+    img {
+        height: 180px;
+        overflow: hidden;
+    }
+}
+
+.border:nth-child(2) {
+    left: 210px;
+    img {
+        height: 180px;
+        overflow: hidden;
+    }
+}
+
+.border:nth-child(3) {
+    left: calc(200px + 170px);
+    img {
+        height: 180px;
+        overflow: hidden;
+    }
+}
+
+.border:nth-child(4) {
+    left: calc(130px);
+    top: 134px;
+    img {
+        height: 180px;
+        overflow: hidden;
+    }
+}
+
+.border:last-child {
+    left: calc(120px + 170px);
+    top: 134px;
+    img {
+        height: 180px;
+        overflow: hidden;
+    }
+}
+
+.reflex {
+    position: absolute;
+    height: 300px;
+    width: 40px;
+    background-color: rgb(200, 200, 200);
+    top: 30px;
+    transform: rotate(-45deg);
+    top: -160px;
+    opacity: .4;
+    transition: all .4s ease;
+}
+
+#shadow {
+    position: absolute;
+    height: 20px;
+    width: 350px;
+    border-radius: 50%;
+    background: radial-gradient(rgb(255, 208, 216), black 85%);
+    top: 500px;
+    box-shadow: 0 0 10px 5px rgb(42, 42, 42);
+}
