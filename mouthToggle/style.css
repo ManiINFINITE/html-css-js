@@ -1,0 +1,177 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #2b1d1a;
+}
+
+.container {
+    position: absolute;
+    height: 110px;
+    width: 300px;
+    border-radius: 100px;
+    background-color: #231715;
+    box-shadow: inset 0 0 20px #130d0c,
+    inset 2px 15px 30px 5px #130d0c,
+    -4px 1px 5px #130d0c,
+    0 -5px 10px #130d0c,
+    3px 1px 5px #7e6b67,
+    -2px 2px 3px #7e6b67;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container .topTeeth {
+    position: absolute;
+    height: 30px;
+    width: 260px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    top: -29px;
+    transform: rotate(4.5deg);
+    transition: all .7s ease;
+}
+
+.container .bottomTeeth {
+    position: absolute;
+    height: 30px;
+    width: 260px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    bottom: -20px;
+    transform: rotate(-4.5deg);
+    transition: all .7s ease;
+    .teeth {
+        box-shadow: inset 0 -28px 15px #36302c;
+    }
+}
+
+.teeth {
+    height: 40px;
+    width: 30px;
+    border-radius: 5px;
+    background-color: #b7a496;
+    box-shadow: inset 0 28px 15px #36302c;
+}
+
+#toggle {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    background-color: #423225;
+    left: 7px;
+    box-shadow: inset 10px -10px 20px 0px #1f1711,
+    inset -1px 1px 5px #a28975,
+    20px 0 30px #0b0806;
+    transition: all .7s ease;
+    cursor: pointer;
+}
+
+.lightsContainer {
+    position: absolute;
+    height: 30px;
+    width: 350px;
+    background-color: transparent;
+    top: 170px;
+}
+
+.lights {
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    transition: all .7s ease;
+}
+
+.lights:first-child {
+    left: 65px;
+    background-color: #ffbfbf;
+    box-shadow: inset 0 -4px 13px  #ff0000,
+    0 -2px 10px #ff0000,
+    0 4px 5px #4b0000,
+    0px 3px 5px .5px #ffb1b1;
+}
+
+.lights:first-child::before {
+    position: absolute;
+    content: "off";
+    top: -30px;
+    text-align: center;
+    left: 3px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #ffb1b1;
+    text-shadow: 0 0 3px rgb(255, 0, 0);
+    transition: all .7s ease;
+}
+
+.lights:last-child {
+    right: 65px;
+    background-color: #8a825e;
+    box-shadow: inset 0 -4px 13px  #000000,
+    0 -2px 10px #000000,
+    0 4px 5px #130d0c,
+    0px 3px 5px .5px #b7a496;
+}
+
+.lights:last-child::before {
+    position: absolute;
+    content: "on";
+    left: 4px;
+    top: -30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #83746a;
+    text-align: center;
+    text-shadow: 0 0 4px #130d0c;
+    transition: all .7s ease;
+}
+
+#chk {
+    display: none;
+}
+
+#chk:checked ~ .container #toggle {
+    left: 193px;
+    box-shadow: inset 10px -10px 20px 0px #1f1711,
+    inset -1px 1px 5px #a28975,
+    -20px 0 30px #0b0806;
+}
+
+#chk:checked ~ .container .topTeeth {
+    transform: rotate(-4.5deg);
+}
+
+#chk:checked ~ .container .bottomTeeth {
+    transform: rotate(4.5deg);
+}
+
+#chk:checked ~ .lightsContainer .lights:last-child {
+    box-shadow: inset 0 -4px 13px  #00ff00,
+    0 -2px 10px #00ff00,
+    0 4px 5px #003200,
+    0px 3px 5px .5px #baffba;
+    background-color: rgb(198, 255, 202);
+}
+
+#chk:checked ~ .lightsContainer .lights:last-child::before {
+    color: #baffba;
+    text-shadow: 0 0 3px #00ff00;
+}
+
+#chk:checked ~ .lightsContainer .lights:first-child {
+    box-shadow: inset 0 -4px 13px  #000000,
+    0 -2px 10px #000000,
+    0 4px 5px #130d0c,
+    0px 3px 5px .5px #b7a496;
+    background-color: rgb(170, 110, 110);
+}
+
+#chk:checked ~ .lightsContainer .lights:first-child::before {
+    color: #83746a;
+    text-shadow: 0 0 3px #130d0c;
+}
