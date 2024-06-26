@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hexagonal Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="border" onmouseover="isHovered(1)" onmouseout="reset(1)">
+            <div id="item1" class="items">
+                <img src="cherry-blossom-mountains-river-nature-scenery-4k-wallpaper-uhdpaper.com-673@0@j.jpg" alt="pic1" class="images">
+                <div class="reflex"></div>
+            </div>
+        </div>
+        <div class="border" onmouseover="isHovered(2)" onmouseout="reset(2)">
+            <div id="item2" class="items">
+                <img src="forest-nature-scenery-4k-wallpaper-uhdpaper.com-563@0@f.jpg" alt="pic2" class="images">
+                <div class="reflex"></div>
+            </div>
+        </div>
+        <div class="border" onmouseover="isHovered(3)" onmouseout="reset(3)">
+            <div id="item3" class="items">
+                <img src="lake-mountain-scenery-nature-4k-wallpaper-uhdpaper.com-101@0@h.jpg" alt="pic3" class="images">
+                <div class="reflex"></div>
+            </div>
+        </div>
+        <div class="border" onmouseover="isHovered(4)" onmouseout="reset(4)">
+            <div id="item4" class="items">
+                <img src="mountain-lake-forest-nature-scenery-4k-wallpaper-uhdpaper.com-135@0@i.jpg" alt="pic4" class="images">
+                <div class="reflex"></div>
+            </div>
+        </div>
+        <div class="border" onmouseover="isHovered(5)" onmouseout="reset(5)">
+            <div id="item5" class="items">
+                <img src="mountain-lake-reflection-nature-scenery-4k-wallpaper-uhdpaper.com-385@0@h.jpg" alt="pic5" class="images">
+                <div class="reflex"></div>
+            </div>
+        </div>
+    </div>
+    <div id="shadow"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
