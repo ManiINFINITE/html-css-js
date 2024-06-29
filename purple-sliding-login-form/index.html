@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sliding login form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="container">
+        <div id="purpleContainer">
+            <div id="signupText">
+                <h1 class="welcome">Welcome Back!</h1>
+                <p class="hint">create a new account or sign in to your account</p>
+                <button id="signinb" class="b">SIGN IN</button>
+            </div>
+            <div id="signinText">
+                <h1 class="welcome">Hello, Friend!</h1>
+                <p class="hint">Register with your personal information</p>
+                <button id="signupb" class="b">SIGN UP</button>
+            </div>
+        </div>
+        <div id="rightContainer">
+            <h1 id="createAccount" class="whiteHeader">Create Account</h1>
+            <h1 id="signinToAccount" class="whiteHeader">Sign In</h1>
+            <div class="iconsBox">
+                <div id="box1" class="icons"><img src="icons8-facebook-24.png" alt="facebook" id="facebook"></div>
+                <div id="box2" class="icons"><img src="icons8-google-30.png" alt="google" id="google"></div>
+                <div id="box3" class="icons"><img src="icons8-linkedin-30.png" alt="linkedin" id="linkedin"></div>
+                <div id="box4" class="icons"><img src="icons8-github-30.png" alt="github" id="github"></div>
+            </div>
+            <input type="text" id="username" class="inputs" placeholder="username" required>
+            <input type="email" id="email" class="inputs" placeholder="email" required>
+            <input type="password" id="password" class="inputs" placeholder="password" required>
+            <button id="signup">SIGN UP</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
