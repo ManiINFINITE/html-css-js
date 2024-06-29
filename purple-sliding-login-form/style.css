@@ -1,0 +1,230 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(45deg, rgb(66, 44, 87), rgb(154, 64, 214), rgb(186, 122, 235));
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#container {
+    position: absolute;
+    width: 850px;
+    height: 600px;
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: -10px 10px 20px 5px rgb(48, 36, 59),
+    inset 0 0 15px 3px rgb(191, 124, 245);
+    z-index: 0;
+    overflow: hidden;
+    transition: all .7s ease;
+}
+
+#container #purpleContainer {
+    position: absolute;
+    height: 600px;
+    width: 425px;
+    left: 0px;
+    background-color: rgb(92, 8, 148);
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    border-top-right-radius: 140px;
+    border-bottom-right-radius: 140px;
+    box-shadow: 0 0 1px 1px rgb(92, 8, 148);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .7s ease;
+    z-index: 2;
+    overflow: hidden;
+}
+
+#signupText {
+    position: absolute;
+    height: 600px;
+    width: 425px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .7s ease;
+}
+
+#purpleContainer .welcome {
+    position: absolute;
+    top: 190px;
+    font-size: 2.5em;
+    color: whitesmoke;
+    text-shadow: 0 0 5px whitesmoke;
+}
+
+#purpleContainer .hint {
+    position: absolute;
+    top: 270px;
+    font-size: 1.1em;
+    color: whitesmoke;
+    text-shadow: 0 0 3px whitesmoke;
+}
+
+#purpleContainer #signinText {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    width: 425px;
+    left: 800px;
+    transition: all .7s ease;
+}
+
+#purpleContainer .b {
+    position: absolute;
+    top: 350px;
+    height: 40px;
+    width: 150px;
+    border: none;
+    border-radius: 100px;
+    font-size: 1em;
+    font-weight: 600;
+    background-color: transparent;
+    border: 1px solid whitesmoke;
+    color: whitesmoke;
+    box-shadow: -2px 2px 5px 1px rgb(48, 36, 59),
+    2px -2px 5px 1px rgb(191, 124, 245),
+    inset -2px 2px 4px 1px rgb(191, 124, 245),
+    inset 2px -2px 5px 1px rgb(48, 36, 59);
+    cursor: pointer;
+}
+
+#container .iconsBox {
+    position: absolute;
+    height: 65px;
+    width: 300px;
+    right: 60px;
+    display: flex;
+    align-items: center;
+    top: 140px;
+}
+
+#container .icons {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    border: 2px solid rgb(92, 8, 148);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#box1 {
+    left: 3px;
+}
+
+#box2 {
+    left: 85px;
+}
+
+#box3 {
+    left: calc(85px + 82px);
+}
+
+#box4 {
+    left: calc(85px + 160px);
+}
+
+#facebook {
+    position: absolute;
+    width: 30px;
+    filter: drop-shadow(0 0 2px rgb(157, 0, 255));
+}
+
+#google {
+    position: absolute;
+    filter: drop-shadow(0 0 2px rgb(157, 0, 255));
+}
+
+#linkedin {
+    position: absolute;
+    filter: drop-shadow(0 0 2px rgb(157, 0, 255));
+    width: 30px;
+}
+
+#github {
+    position: absolute;
+    filter: drop-shadow(0 0 2px rgb(157, 0, 255));
+    height: 35px;
+}
+
+#container #rightContainer {
+    position: absolute;
+    height: 600px;
+    width: 425px;
+    background-color: transparent;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .7s ease;
+    z-index: 1;
+}
+
+#rightContainer .whiteHeader {
+    position: absolute;
+    top: 50px;
+    font-size: 2.3em;
+    text-shadow: 0 0 1.5px rgb(48, 36, 59);
+    transition: all .6s ease;
+}
+
+#createAccount {
+    opacity: 1;
+}
+
+#signinToAccount {
+    opacity: 0;
+}
+
+#rightContainer .inputs {
+    position: absolute;
+    opacity: 1;
+    height: 40px;
+    width: 300px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(211, 211, 211);
+    padding: 10px;
+    box-sizing: border-box;   
+    transition: all .7s ease;
+}
+
+#username {
+    top: 250px;
+}
+
+#email {
+    top: 320px;
+}
+
+#password {
+    top: 390px;
+}
+
+#signup {
+    position: absolute;
+    height: 40px;
+    width: 160px;
+    top: 465px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(92, 8, 148);
+    color: whitesmoke;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 2px -2px 3px 1px rgb(191, 124, 245),
+    -2px 2px 3px 1px rgb(48, 36, 59),
+    inset 2px -2px 3px 1px rgb(48, 36, 59),
+    inset -2px 2px 3px 1px rgb(191, 124, 245);
+}
