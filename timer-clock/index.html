@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="screen">
+            <div id="clock">
+                <div id="minute"></div>
+                <div id="dots"></div>
+                <div id="second"></div>
+            </div>
+            <button id="playPause">play</button>
+            <img src="assets/icons8-setting-32.png" alt="setting" id="setting" onclick="openSetting()">
+        </div>
+        <div class="menu">
+            <button id="pomo" onclick="switchMode('pomo')">pomodoro</button>
+            <button id="short" onclick="switchMode('short')">short break</button>
+            <button id="long" onclick="switchMode('long')">long break</button>
+        </div>
+        <div id="settingShadow"></div>
+        <div class="setting">
+            <h1>settings</h1>
+            <h2>Time (minutes)</h2>
+            <h3 id="pomoT">pomodoro</h3>
+            <input type="text" id="pomoI">
+            <h3 id="shortT">short break</h3>
+            <input type="text" id="shortI">
+            <h3 id="longT">long break</h3>
+            <input type="text" id="longI">
+            <button id="apply" onclick="apply()">apply</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
