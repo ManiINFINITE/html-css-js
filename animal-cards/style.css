@@ -1,0 +1,108 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(45deg, #111, #252525, #444);
+}
+
+.buttons {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button {
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        filter: drop-shadow(10px 0px 0px red) drop-shadow(20px 0px 0px yellow);
+        transition: all .15s;
+        img {
+            height: 60px;
+        }
+    }
+}
+
+#right {
+    right: 40px;
+}
+
+#left {
+    left: 40px;
+    transform: rotate(180deg);
+}
+
+button:hover {
+    transform: scale(1.2);
+}
+
+button:active {
+    transform: scale(.8);
+}
+
+.container {
+    position: absolute;
+    height: 500px;
+    width: 400px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .cards {
+    position: absolute;
+    height: 400px;
+    width: 300px;
+    background-color: #555;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.cards:nth-child(1) {
+    background: linear-gradient(to top, black 35% , rgb(255, 140, 0));
+    box-shadow: -15px 15px 30px,
+    3px -3px 30px rgb(255, 140, 0);
+    #cheetah {
+        position: absolute;
+        height: 300px;
+        filter: drop-shadow(-8px 8px rgb(255, 140, 0)) drop-shadow(10px -10px black);
+    }
+    z-index: 2;
+}
+
+.cards:nth-child(2) {
+    background: linear-gradient(to top, black 35%, rgb(255, 0, 0));
+    box-shadow: -15px 15px 30px,
+    3px -3px 30px rgb(255, 0, 0);
+    #wolf {
+        position: absolute;
+        height: 300px;
+        filter: drop-shadow(-15px 15px 0px black) drop-shadow(10px -10px 0px rgb(255, 0, 0));
+    }
+    transform: rotate(10deg);
+    z-index: 1;
+}
+
+.cards:nth-child(3) {
+    background: linear-gradient(to top, black 35%, rgb(214, 255, 67));
+    box-shadow: -15px 15px 30px,
+    3px -3px 30px rgb(214, 255, 67);
+    #panther {
+        position: absolute;
+        height: 250px;
+        left: 6px;
+        filter: drop-shadow(-6px 6px 0px rgb(214, 255, 67)) drop-shadow(10px -10px 0px black);
+    }
+    transform: rotate(20deg);
+    z-index: 0;
+}
+
