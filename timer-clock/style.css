@@ -1,0 +1,201 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: linear-gradient(to top, rgb(108, 131, 134), rgb(179, 212, 212));
+}
+
+.container {
+    position: absolute;
+    height: 475px;
+    width: 410px;
+    background-color: rgb(215, 255, 255);
+    border-top-right-radius: 200px;
+    border-top-left-radius: 200px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    box-shadow: -7px -7px 50px rgb(228, 255, 255),
+    8px 8px 40px rgb(54, 66, 67),
+    inset 8px 8px 30px rgb(228, 255, 255),
+    inset -8px -8px 40px rgb(65, 86, 88);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .screen {
+    position: absolute;
+    height: 350px;
+    width: 350px;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 50);
+    top: 27px;
+    box-shadow: inset 5px 5px 15px rgb(215, 255, 255),
+    7px 7px 25px rgb(54, 66, 67);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .screen #clock {
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    border-radius: 200px;
+    background-color: rgb(0, 0, 50);
+    box-shadow: inset 13px 15px 10px black;
+    top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 83, 83);
+    font-size: 40px;
+    font-weight: 900;
+    text-shadow: 0 0 3px rgb(255, 83, 83);
+}
+
+#playPause {
+    position: absolute;
+    color: #e4ffff;
+    background-color: transparent;
+    border: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-weight: 100;
+    top: 200px;
+    cursor: pointer;
+    left: 138px;
+}
+
+img {
+    position: absolute;
+    bottom: 30px;
+    cursor: pointer;
+}
+
+.container .menu {
+    position: absolute;
+    width: 360px;
+    height: 60px;
+    border-radius: 300px;
+    background-color: rgb(0, 0, 50);
+    bottom: 20px;
+    box-shadow: -7px -7px 50px rgb(228, 255, 255),
+    3px 3px 10px rgb(0, 3, 57),
+    inset 2px 2px 7px rgb(228, 255, 255),
+    inset -3px -3px 10px rgb(0, 9, 26);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.menu button {
+    height: 40px;
+    width: 110px;
+    border-radius: 100px;
+    background-color: transparent;
+    border: none;
+    color: rgb(215, 255, 255);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#pomo {
+    background-color: rgb(255, 83, 83);
+    color: rgb(0, 0, 50);
+}
+
+.container #settingShadow {
+    position: absolute;
+    height: 110vh;
+    width: 110vw;
+    background-color: rgba(0, 0, 0, .75);
+    display: none;
+}
+
+.container .setting {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    width: 450px;
+    background-color: azure;
+    border-radius: 25px;
+    color: rgb(0, 0, 50);
+    display: none;
+}
+
+.setting h1 {
+    position: absolute;
+    top: -5px;
+    left: 20px;
+}
+
+.setting h2 {
+    position: absolute;
+    top: 65px;
+    left: 20px;
+    font-size: 17px;
+}
+
+.setting h3 {
+    position: absolute;
+    font-size: 15px;
+    font-weight: 100;
+    top: 110px;
+}
+
+.setting #pomoT {
+    left: 32px;
+}
+
+.setting #longT {
+    right: 32px;
+}
+
+.setting input {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    height: 40px;
+    width: 110px;
+    border-radius: 100px;
+    top: 155px;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+    color: rgb(0, 0, 50);
+    font-size: 15px;
+    font-weight: 900;
+}
+
+input:focus {
+    outline: none;
+}
+
+#pomoI {
+    left: 15px;
+}
+
+#longI {
+    right: 15px;
+}
+
+#apply {
+    position: absolute;
+    height: 45px;
+    width: 90px;
+    background-color: rgb(0, 0, 50);
+    border: none;
+    border-radius: 100px;
+    color: azure;
+    text-transform: uppercase;
+    font-weight: 700;
+    bottom: -25px;
+    cursor: pointer;
+}
