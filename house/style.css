@@ -66,16 +66,18 @@ body {
     width: 110vw;
     background-color: #1a1632;
     left: -110vw;
+    z-index: -2;
     transition: all .8s ease;
 }
 
 .ground {
     position: absolute;
     height: 6px;
-    width: 800px;
+    width: 850px;
     border-radius: 10px;
     background-color: #669e53;
     bottom: 70px;
+    transition: all .8s ease;
 }
 
 .ground .bushBehind {
@@ -97,6 +99,7 @@ body {
     background-color: var(--bush);
     bottom: 0;
     border-bottom-left-radius: 10px;
+    transition: all .8s ease;
 }
 
 .bushBehind #bush1 {
@@ -108,6 +111,7 @@ body {
     background-color: var(--bush);
     bottom: 0px;
     left: -10px;
+    transition: all .8s ease;
 }
 
 .bushBehind #bush2 {
@@ -118,6 +122,7 @@ body {
     background-color: var(--bush);
     right: -20px;
     bottom: 0;
+    transition: all .8s ease;
 }
 
 #bush1::after {
@@ -161,9 +166,10 @@ body {
     top: -260px;
     left: 170px;
     box-shadow: inset 0 -10px 10px #cb992d;
+    transition: all .8s ease;
 }
 
-.house::after {
+.house #triangle {
     position: absolute;
     content: '';
     height: 130px;
@@ -171,6 +177,7 @@ body {
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
     background-color: #febe38;
     top: -130px;
+    transition: all .8s ease;
 }
 
 .house #roofRight {
@@ -184,6 +191,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all .8s ease;
 }
 
 .part {
@@ -192,6 +200,7 @@ body {
     width: 50px;
     border-radius: 100px;
     background-color: #e93e2d;
+    transition: all .8s ease;
 }
 
 .part:first-child {
@@ -222,6 +231,7 @@ body {
     background-color: #d93f18;
     right: -15px;
     z-index: 1;
+    transition: all .8s ease;
 }
 
 #edge2 {
@@ -234,6 +244,7 @@ body {
     left: -22px;
     z-index: 2;
     transform: rotate(-8.5deg);
+    transition: all .8s ease;
 }
 
 #edge2shadow {
@@ -246,6 +257,7 @@ body {
     left: -22px;
     z-index: 1;
     transform: rotate(-8.5deg);
+    transition: all .8s ease;
 }
 
 #edge3 {
@@ -258,6 +270,7 @@ body {
     left: -17px;
     z-index: 1;
     transform: rotate(10.5deg) rotateY(180deg);
+    transition: all .8s ease;
 }
 
 #edge3shadow {
@@ -270,13 +283,14 @@ body {
     left: -10.5px;
     z-index: 1;
     transform: rotate(10.5deg) rotateY(180deg);
+    transition: all .8s ease;
 }
 
 #underEdge {
     position: absolute;
     height: 10px;
     width: 10px;
-    background-color: #8b7261;
+    background-color: #53443a;
     clip-path: polygon(100% 0, 45% 100%, 100% 100%);
     top: 12px;
     left: -10px;
@@ -293,6 +307,7 @@ body {
     align-items: center;
     justify-content: center;
     box-shadow: inset 0 30px 10px #cb6c2d;
+    transition: all .8s ease;
 }
 
 .chimney {
@@ -305,9 +320,10 @@ body {
     right: 160px;
     top: -150px;
     box-shadow: inset 0 5px #d02d25;
+    transition: all .8s ease;
 }
 
-.chimney #left {
+.chimney #leftChimney {
     position: absolute;
     height: 65px;
     width: 50px;
@@ -315,6 +331,7 @@ body {
     clip-path: polygon(61% 0, 100% 0, 100% 100%, 61% 68%);
     left: -49px;
     box-shadow: inset 0 5px #e9524a;
+    transition: all .8s ease;
 }
 
 .chimney #topSmall {
@@ -324,17 +341,9 @@ body {
     background-color: #fe644e;
     top: -8px;
     left: -23px;
-    box-shadow: inset 0 4px #e9524a;
-}
-
-#topSmall::after {
-    position: absolute;
-    content: '';
-    height: 8px;
-    width: 50px;
-    background-color: #e93429;
-    right: 0;
-    box-shadow: inset 0 4px #d02d25;
+    box-shadow: inset 0 4px #e9524a,
+    inset -50px 0 #e93429;
+    transition: all .8s ease;
 }
 
 .chimney #topBig {
@@ -344,15 +353,8 @@ body {
     background-color: #fe644e;
     top: -15px;
     left: -28px;
-}
-
-.chimney #topBig::after {
-    position: absolute;
-    content: '';
-    height: 8px;
-    right: 0;
-    width: 60px;
-    background-color: #e93429;
+    transition: all .8s ease;
+    box-shadow: inset -60px 0 #e93429;
 }
 
 #rightWall #bottom {
@@ -362,6 +364,7 @@ body {
     bottom: 0;
     background-color: #fc832a;
     box-shadow: inset 0 -5px 6px #b85f1f;
+    transition: all .8s ease;
 }
 
 #rightWall .window {
@@ -376,7 +379,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    #glass {
+    #glass1, #glass2 {
         position: absolute;
         height: 80px;
         width: 80px;
@@ -386,10 +389,12 @@ body {
         box-sizing: border-box;
         border: 8px solid;
         overflow: hidden;
+        transition: all .8s ease;
         border-color: #bbd7cb #cfefe1 #cfefe1 #bbd7cb;
     }
+    
 
-    #glass::after {
+    #line1, #line3 {
         position: absolute;
         content: '';
         height: 150px;
@@ -398,9 +403,10 @@ body {
         transform: rotate(40deg);
         top: -40px;
         left: 15px;
+        transition: all .8s ease;
     }
 
-    #glass::before {
+    #line2, #line4 {
         position: absolute;
         content: '';
         height: 150px;
@@ -409,6 +415,7 @@ body {
         transform: rotate(40deg);
         top: 0px;
         left: 25px;
+        transition: all .8s ease;
     }
 
     #edge {
@@ -439,6 +446,7 @@ body {
     width: 40px;
     background-color: #f6911f;
     border-radius: 100px;
+    transition: all .8s ease;
 }
 
 #block1 {
@@ -471,7 +479,7 @@ body {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    #glass {
+    #glass3 {
         position: absolute;
         height: 75px;
         width: 75px;
@@ -479,9 +487,10 @@ body {
         background-color: #61bdde;
         right: 0px;
         overflow: hidden;
+        transition: all .8s ease;
     }
 
-    #glass::after {
+    #line5 {
         position: absolute;
         content: '';
         height: 150px;
@@ -490,9 +499,10 @@ body {
         transform: rotate(40deg);
         top: -20px;
         left: -3px;
+        transition: all .8s ease;
     }
 
-    #glass::before {
+    #line6 {
         position: absolute;
         content: '';
         height: 150px;
@@ -500,6 +510,7 @@ body {
         background-color: #95daf7;
         transform: rotate(40deg);
         right: -15px;
+        transition: all .8s ease;
     }
 }
 
@@ -511,6 +522,7 @@ body {
     bottom: 0;
     left: 159px;
     box-shadow: inset 0 -5px 10px #a76917;
+    transition: all .8s ease;
 }
 
 .house .stairs {
@@ -522,7 +534,7 @@ body {
     left: -40px;
 }
 
-.stairs #right {
+.stairs #rightStair {
     position: absolute;
     height: 45px;
     width: 40px;
@@ -530,9 +542,10 @@ body {
     bottom: 0;
     right: 0;
     box-shadow: inset 0 -5px 5px #b85f1f;
+    transition: all .8s ease;
 }
 
-.stairs #right::after {
+.stairs #after {
     position: absolute;
     content: '';
     height: 22.5px;
@@ -542,6 +555,7 @@ body {
     bottom: 0;
     z-index: 1;
     box-shadow: inset 0 -5px 5px #b85f1f;
+    transition: all .8s ease;
 }
 
 .stairs #front1 {
@@ -553,6 +567,7 @@ body {
     right: 38px;
     box-shadow: inset 0 -5px 5px #cca350;
     z-index: 2;
+    transition: all .8s ease;
 }
 
 .stairs #front2 {
@@ -564,6 +579,7 @@ body {
     right: 73px;
     box-shadow: inset 0 -5px 5px #cca350;
     z-index: 2;
+    transition: .8s ease;
 }
 
 #leftTape {
@@ -575,6 +591,7 @@ body {
     left: -25px;
     z-index: 0;
     box-shadow: inset 5px 0 5px #b85f1f;
+    transition: all .8s ease;
 }
 
 .door {
@@ -587,6 +604,7 @@ body {
     box-shadow: inset 0px 15px 10px #8a3e26,
     inset 0 -10px 10px #8a3e26,
     -15px 0 #e87929;
+    transition: all .8s ease;
 }
 
 .door #handle {
@@ -603,10 +621,10 @@ body {
 
 .rightBush {
     position: absolute;
-    right: 0;
+    right: 50px;
 }
 
-.rightBush #stand {
+.rightBush #standRightBush {
     position: absolute;
     height: 30px;
     width: 160px;
@@ -615,6 +633,7 @@ body {
     top: -30px;
     border-bottom-right-radius: 3px;
     border-bottom-left-radius: 10px;
+    transition: all .8s ease;
 }
 
 .rightBush #mid {
@@ -625,6 +644,7 @@ body {
     background-color: #a2c237;
     top: -100px;
     right: 65px;
+    transition: all .8s ease;
 }
 
 #mid::after {
@@ -646,6 +666,7 @@ body {
     border-radius: 50%;
     right: 130px;
     top: -80px;
+    transition: all .8s ease;
 }
 
 .rightBush #left::after {
@@ -667,6 +688,7 @@ body {
     background-color: #a2c237;
     top: -70px;
     right: 20px;
+    transition: all .8s ease;
 }
 
 .rightBush #right::after {
@@ -680,18 +702,32 @@ body {
     top: 40px;
 }
 
+.rightBush #inner {
+    position: absolute;
+    content: '';
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #a2c237;
+    right: -25px;
+    bottom: 0;
+    border-bottom-right-radius: 1px;
+    transition: all .8s ease;
+}
+
 #behindBush {
     position: absolute;
     height: 100px;
     width: 100px;
     border-radius: 50%;
     background-color: #70ab43;
-    right: 70px;
+    right: 120px;
     top: -160px;
     z-index: -1;
+    transition: all .8s ease;
 }
 
-#behindBush::after {
+#behindBush #afterBehindBush {
     position: absolute;
     content: '';
     height: 80px;
@@ -700,6 +736,7 @@ body {
     background-color: #70ab43;
     right: -30px;
     bottom: -25px;
+    transition: all .8s ease;
 }
 
 #behindBush::before {
