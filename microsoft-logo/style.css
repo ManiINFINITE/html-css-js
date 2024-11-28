@@ -1,0 +1,41 @@
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    background-color: #ddd;
+    box-sizing: border-box;
+    padding: 5px;
+    box-shadow: 0 0 10px 5px #ddd;
+}
+
+.container .square {
+    position: relative;
+    box-sizing: border-box;
+    height: 160px;
+    width: 160px;
+    margin: 5px;
+    float: left;
+}
+
+.square:first-child {
+    background-color: #F25022;
+}
+
+.square:nth-child(2) {
+    background-color: #7FBA00;
+}
+
+.square:nth-child(3) {
+    background-color: #00A4EF;
+}
+
+.square:last-child {
+    background-color: #FFB900;
+}
