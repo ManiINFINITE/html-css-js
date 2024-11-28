@@ -1,0 +1,239 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+header {
+    margin: 0;
+    position: relative;
+    height: 100px;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    padding-left: 30px;
+}
+
+header #heading {
+    position: relative;
+    left: 0;
+    color: white;
+    font-size: 2.5em;
+    align-self: center;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header img {
+    position: relative;
+    height: 100px;
+    margin-left: 60%;
+}
+
+nav {
+    position: relative;
+    height: 40px;
+    width: 100%;
+    background-color: #7b7b7b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    flex-direction: row;
+}
+
+nav a {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+    font-size: 1em;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90px;
+    margin-right: 10px;
+}
+
+nav a:first-child, a:nth-child(2) {
+    width: 70px;
+}
+
+nav a:hover {
+    background-color: #000;
+}
+
+main {
+    position: relative;
+    height: 480px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+main .cities {
+    position: relative;
+    margin: 0;
+    height: 480px;
+    width: 20%;
+    padding: 0;
+    border-right: 2px solid #7b7b7b;
+}
+
+.cities ul {
+    position: relative;
+    padding-left: 0;
+    padding-top: 0;
+}
+
+.cities ul li {
+    position: relative;
+    list-style: none;
+    font-size: 1.5em;
+    margin-top: 5px;
+    cursor: pointer;
+    text-align: left;
+    width: 100%;
+    padding-left: 10%;
+    box-sizing: border-box;
+}
+
+.cities ul li:hover {
+    transform: scale(1.1);
+}
+
+.cities ul li:first-child {
+    background-color: #7b7b7b;
+}
+
+main .information {
+    position: relative;
+    height: 480px; 
+    width: 100%;
+    padding-left: 5%;
+    overflow-y: auto; 
+    overflow-x: hidden;
+    padding-right: 5%;
+}
+
+.information::-webkit-scrollbar {
+    width: 15px;
+}
+
+.information::-webkit-scrollbar-track {
+    background-color: #7b7b7b;
+}
+
+.information::-webkit-scrollbar-thumb {
+    background-color: #000;
+    border-radius: 5px;
+}
+
+.information::-webkit-scrollbar-thumb:hover {
+    background-color: #fff;
+    box-shadow: inset 0 0 10px 2px #000000;
+}
+
+.information::-webkit-scrollbar-thumb:active {
+    background-color: red;
+}
+
+.information h2 {
+    position: sticky;
+    top: 0;
+    font-size: 3em;
+    background-color: rgb(255, 255, 255); 
+    z-index: 1;
+    height: 60px;
+    border-bottom: 2px solid #7b7b7b;
+    margin-bottom: 10px;
+}
+
+.information p {
+    position: relative;
+    font-size: 1.5em;
+}
+
+footer {
+    position: relative;
+    background-color: #000;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    align-self: flex-end;
+}
+
+footer h5 {
+    color: white;
+    font-size: 12px;
+    font-weight: 100;
+    letter-spacing: 4px;
+}
+
+footer h5 symbol {
+    color: red;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    #heading {
+        text-align: center;
+        align-self: center;
+        justify-self: center;
+    }
+
+    nav {
+        height: 150px;
+        flex-direction: column;
+    }
+
+    nav a {
+        background-color: #7b7b7b;
+    }
+
+    nav a:nth-child(n) {
+        width: 100%;
+    }
+
+    nav a:nth-child(n):hover {
+        background-color: #000;
+    }
+
+    .cities ul li {
+        font-size: 20px;
+    }
+
+    header img {
+        display: none;
+    }
+
+    header {
+        display: grid;
+        place-items: center;
+    }
+
+    main .information {
+        height: 400px;
+    }
+
+    footer {
+        height: 60px;
+        transform: translateY(-90px);
+    }
+}
